@@ -4,7 +4,6 @@ import { prisma } from './db.server.ts'
 
 export async function handleSubscriptionCreated(
 	subscription: Stripe.Subscription,
-	request: Request,
 	context: any,
 ) {
 	const stripe = new Stripe(context.STRIPE_SECRET_KEY, {
